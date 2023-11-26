@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "es6", // which version of js we're using
+      "module": "commonjs", // for node projects, typically commonjs module is used
+      "rootDir": "src", // root directory is src
+      "outDir": "dist", // output directory is dist (final build files will be here)
+      "strict": true, // rules for type checking. generally "strict" is better
+      "esModuleInterop": true,}, //a best practice for typescript projects ---> smoother integration
+    "include": ["src/**/*.ts"], // include all typescript files in src
+    "exclude": ["node_modules"] // exclude node_modules. This has already been accounted for in gitignore, but doesnt hurt to add here. test files can also be added to this array.
+  }
+
+  
