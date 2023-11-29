@@ -3,8 +3,9 @@ import express from "express"; // handles HTTP requests in node app
 import ffmpeg from "fluent-ffmpeg"; // wrapper, allows video and audio processing
 
 const app = express(); //create an instance of express for server
+app.use(express.json()); //tell express server that it can handle json request
 
-app.post("/processed-video", (req, res) => { // POST route at "" path, run below function when accessed 
+app.post("/process-video", (req, res) => { // POST route at "" path, run below function when accessed 
     
   // get path of the input/output video file from the request body and store
   const inputFilePath = req.body.inputFilePath;
